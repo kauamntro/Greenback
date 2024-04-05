@@ -2,8 +2,6 @@
 
 Este é um projeto de um sistema para gerenciamento de finanças, que está apenas em seu início. Possui apenas a parte inicial do frontend, sera desenvolvido ainda o backend contando com uma API Rest e um banco de dados SQL.
 
-<img src=""/>
-
 ## Visão Geral
 
 Este projeto tem como objetivo ser um sistema de finanças completo.
