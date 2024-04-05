@@ -1,3 +1,5 @@
+import MainPanelHistory from "./MainPanelHistory";
+import MainPanelSectionAnalistic from "./MainPanelSectionAnalistic";
 import MainPanelSectionCard from "./MainPanelSectionCard"
 
 const headerData = [
@@ -44,9 +46,8 @@ export default function MainPanelSectionMain() {
                  ))}
                 </ul>
             </header>
-            <article>
-
-            </article>
+                  <MainPanelSectionAnalistic />
+                  <MainPanelHistory />
         </section>
         <aside>
 

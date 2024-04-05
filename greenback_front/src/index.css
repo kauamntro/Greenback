@@ -53,7 +53,7 @@
     }
   
     .dark {
-      --background: #111111;
+      --background: #111827;
       --bg-image: url(assets/abstract-dark.png);
       --foreground: rgb(243 244 246);
       --card: 24 9.8% 10%;
@@ -90,7 +90,7 @@ body {
 .border-b-0-5{
   border-bottom: 0.5px;
 }
-
+/* 
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -123,4 +123,8 @@ body {
 }
 ::-webkit-scrollbar-corner {
   background: transparent;
+} */
+.apexcharts-tooltip {
+  background: #f3f3f3;
+  color: black;
 }

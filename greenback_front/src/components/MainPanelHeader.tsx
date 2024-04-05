@@ -9,9 +9,12 @@ import {
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
 import { ModeToggle } from "./mode-toggle";
-  
 
-export default function MainPanelHeader () {
+interface MainPanelHeaderProps {
+    functionExterna?: () => void; 
+}  
+  
+export default function MainPanelHeader ({functionExterna}:MainPanelHeaderProps) {
     return (
         <header className="flex justify-between items-center w-full p-11 h-11">
             <h1 className="text-4xl font-semibold">Dashboard</h1>
@@ -24,22 +27,22 @@ export default function MainPanelHeader () {
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                         </svg>
                     </div>
-                    <input type="search" id="default-search" className="w-80 p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-green-400 focus:border-green-400 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-400" placeholder="Search for transaction, item, etc" />
+                    <input type="search" id="default-search" className="w-80 p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-green-400 focus:border-green-400 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-400" placeholder="Search for transaction, item, etc" />
                     
                 </div>
             </form>
                 <ul className="flex flex-row items-center justify-center gap-6">
                     <li>
-                    <Bell size={28} className="hover:fill-green-400 hover:stroke-green-400"/>
+                    <Bell size={28} className="hover:fill-green-400 hover:stroke-green-400 hover:cursor-pointer"/>
                     </li>
                     <li>
-                    <MessageCircle size={28} className="hover:fill-green-400 hover:stroke-green-400" />
+                    <MessageCircle size={28} className="hover:fill-green-400 hover:stroke-green-400 hover:cursor-pointer" />
                     </li>
                     <li>
                     <DropdownMenu>
                     <DropdownMenuTrigger>
                     <Avatar>
-                        <AvatarImage src="https://github.com/shadcn.png" />
+                        <AvatarImage src="https://github.com/kauamntro.png" />
                         <AvatarFallback>CN</AvatarFallback>
                     </Avatar>
                     </DropdownMenuTrigger>
@@ -47,9 +50,8 @@ export default function MainPanelHeader () {
                         <DropdownMenuLabel>My Account</DropdownMenuLabel>
                         <DropdownMenuSeparator />
                         <DropdownMenuItem>Profile</DropdownMenuItem>
-                        <DropdownMenuItem>Billing</DropdownMenuItem>
-                        <DropdownMenuItem>Team</DropdownMenuItem>
-                        <DropdownMenuItem>Subscription</DropdownMenuItem>
+                        <DropdownMenuItem onClick={functionExterna}>Home</DropdownMenuItem>
+                        <DropdownMenuItem onClick={functionExterna}>Logout</DropdownMenuItem>
                     </DropdownMenuContent>
                     </DropdownMenu>
                     </li>
